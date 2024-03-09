@@ -60,7 +60,7 @@ sudo ufw allow 8645
 
 # dockerları ayağa kaldıralım
 > docker-compose up -d
-#dockerları kontrol edelim
+# dockerları kontrol edelim
 > docker-compose ps
 ```
 # bu komut ile içersine girelim:
