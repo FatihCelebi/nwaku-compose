@@ -30,11 +30,11 @@ nano .env
 ```
 
 > Değiştireceğimiz kısımlar bunlar aşağıya yazıyorum:
-
+```console
 * `ETH_CLIENT_ADDRESS` = Infura'dan Sepolia RPC aldım bedava onu ekledim - https://www.infura.io/
 * `ETH_TESTNET_KEY` = Waku için açtığım metamaskın private keyini ekledim - Metamask hesap bilgileri kısmında
 * `RLN_RELAY_CRED_PASSWORD` = Bir şifre belirledim
-
+```
 > CTRL X Y ENTER ile kaydedip çıkıyoruz.
 
 ```console
@@ -62,12 +62,14 @@ sudo ufw allow 8645
 
 # dockerları ayağa kaldıralım
 docker-compose up -d
-
-# bu komut ile içersine girelim:
-nano ~/nwaku-compose/docker-compose.yml
 ```
+# bu komut ile içersine girelim:
+
+nano ~/nwaku-compose/docker-compose.yml
+```console
 > içersine girdikten sonra `ctrl w` yaparak `3000:3000` portuna bakalım
 > `127.0.0.1:3000:3000` yazıyor ise  `0.0.0.0:3000:3000`şeklinde düzeltelim ve docker-compose down-up yazalım.
+```
 
 > Yaklaşık 30 dk içersine verileriniz güncellenecek
 
