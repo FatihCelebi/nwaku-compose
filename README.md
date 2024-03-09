@@ -1,20 +1,18 @@
 
-<h1 align="center"> Kurulum için adımlar</h1>
+<h1 align="center"> Waku Setup</h1>
 
-```console
-# Sunucu güncellemesi ve gerekli paketler
+# Sunucu Paketleri update
 sudo apt update && sudo apt upgrade -y
 sudo apt-get install build-essential git libpq5 jq -y
 
-# kodu girdikten sonra 1 seçelim.
+# kodu girdikten sonra 1 yazıyoruz.
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 
 sudo apt install docker.io -y
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-```
-```console
+
 # Waku kurulumu için
 
 # wakuyu clonluyoruz
@@ -63,31 +61,16 @@ docker-compose up -d
 # bu komut ile içersine girelim:
 nano ~/nwaku-compose/docker-compose.yml
 ```
-> içersine girdikten sonra `ctrl w` yaparak `3000:3000` yazıp aratalım
+> içersine girdikten sonra `ctrl w` yaparak `3000:3000` portuna bakalım
+> `127.0.0.1:3000:3000` yazıyor ise  `0.0.0.0:3000:3000`şeklinde düzeltelim ve docker-compose down-up yazalım.
 
-> `127.0.0.1:3000:3000` olanı `0.0.0.0:3000:3000` şeklinde değişelim.
-
-> CTRL X Y ENTER ile kaydedip çıkalım.
-
-```console
-# tekrar başlatalım
-docker-compose down
-docker-compose up -d
-```
-
-> Yaklaşık 1 saat içersine verileriniz güncellenecek
+> Yaklaşık 30 dk içersine verileriniz güncellenecek
 
 > `http://IP_ADRESİN:3000/d/yns_4vFVk/nwaku-monitoring`
 
-> IP_ADRESİN kısmını değiştirip google'da aratın.
+> IP_ADRESİN kendi sunucunuzun ipsi ile tarayıcıdan açın.
 
 > Yedekleme için `keystore.json` dosyasını kaydedin.
-
-```console
-# Bu iki komutlada çıktı alıyorsanız sorun yoktur.
-curl --location 'http://127.0.0.1:8645/debug/v1/version'
-curl --location 'http://127.0.0.1:8645/debug/v1/info'
-```
 
 
 
