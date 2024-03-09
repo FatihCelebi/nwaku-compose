@@ -26,13 +26,13 @@ cd nwaku-compose
 cp .env.example .env
 ```
 # .env içinde değişiklik için
-nano .env
+> nano .env
 ```
 
 > Değiştireceğimiz kısımlar bunlar aşağıya yazıyorum:
 ```console
 * `ETH_CLIENT_ADDRESS` = Infura'dan Sepolia RPC aldım bedava onu ekledim - https://www.infura.io/
-* `ETH_TESTNET_KEY` = Waku için açtığım metamaskın private keyini ekledim - Metamask hesap bilgileri kısmında
+* `ETH_TESTNET_KEY` = Waku için açtığım metamaskın private keyini ekliyoruz - Metamask hesap bilgileri kısmında
 * `RLN_RELAY_CRED_PASSWORD` = Bir şifre belirledim
 ```
 > CTRL X Y ENTER ile kaydedip çıkıyoruz.
