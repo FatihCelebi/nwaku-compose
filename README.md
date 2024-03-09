@@ -19,7 +19,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 # Waku kurulumu için
 
-# wakuyu clonluyoruz
+> wakuyu clonluyoruz
 ```console
 git clone https://github.com/waku-org/nwaku-compose
 cd nwaku-compose
