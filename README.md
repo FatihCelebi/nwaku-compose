@@ -2,25 +2,29 @@
 <h1 align="center"> Waku Setup</h1>
 
 # Sunucu Paketleri update
+```console
 sudo apt update && sudo apt upgrade -y
 sudo apt-get install build-essential git libpq5 jq -y
+```
 
 # kodu girdikten sonra 1 yazıyoruz.
 ```console
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 ```
+```console
 sudo apt install docker.io -y
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-
+```
 # Waku kurulumu için
 
 # wakuyu clonluyoruz
+```console
 git clone https://github.com/waku-org/nwaku-compose
 cd nwaku-compose
 cp .env.example .env
-
+```
 # .env içinde değişiklik için
 nano .env
 ```
