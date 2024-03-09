@@ -46,12 +46,10 @@ cp .env.example .env
 <h1 align="center"> Waku node başlatma </h1>
 
 ```console
-# portları açma
+# firewallda portları aktif ediyoruz.
 
-# yes diyelim bu komutu girdikten sonra
+# yes diyelim aşağıdaki komutu girdikten sonra
 sudo ufw enable
-
-# bu port komutlarını toplu girebilirsiniz.
 sudo ufw allow 22    
 sudo ufw allow 3000   
 sudo ufw allow 8545   
@@ -61,7 +59,9 @@ sudo ufw allow 30304
 sudo ufw allow 8645
 
 # dockerları ayağa kaldıralım
-docker-compose up -d
+> docker-compose up -d
+#dockerları kontrol edelim
+> docker-compose ps
 ```
 # bu komut ile içersine girelim:
 
