@@ -1,19 +1,5 @@
-<h1 align="center"> Waku </h1>
 
-> Ne kadar sürecek? Bilgi yok - Ödüllü mü? Net değil olabilir. Garanti bir şey beklemiyorum, zaten kücük bir donanım.
-
-> Neden kuruyorum? Proje katılmaya değer, vaktimi almadı, bir kaç dakikada kuruluyor.
-
-> Topluluk kanalları: [Twitter](https://twitter.com/Ruesandora0) - [Duyuru](https://t.me/RuesAnnouncement) - [Chat](https://t.me/RuesChat) - [WP](https://whatsapp.com/channel/0029VaBcj7V1dAw1H2KhMk34) - [Node soruları için](https://t.me/ruesshare/13003/13004) - [Waku Discord](https://discord.gg/4DBrFfyY)
-
-<h1 align="center"> Donanım </h1>
-
-> Firma olarak [Hetzner](https://github.com/ruesandora/Hetzner/blob/main/README.md) kullanıyorum - siz kendinize göre seçebilirsiniz.
-```
-2 CPU 2 RAM - 40 SSD
-```
-
-<h1 align="center"> Kurulum </h1>
+<h1 align="center"> Kurulum için adımlar</h1>
 
 ```console
 # Sunucu güncellemesi ve gerekli paketler
@@ -29,14 +15,14 @@ sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.5/docker
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 ```console
-# Waku kurulumu
+# Waku kurulumu için
 
-# wakuyu klonluyoruz
+# wakuyu clonluyoruz
 git clone https://github.com/waku-org/nwaku-compose
 cd nwaku-compose
 cp .env.example .env
 
-# .env içine giriyoruz bu komutla
+# .env içinde değişiklik için
 nano .env
 ```
 
@@ -71,14 +57,9 @@ sudo ufw allow 9005
 sudo ufw allow 30304  
 sudo ufw allow 8645
 
-# docker up edelim
+# dockerları ayağa kaldıralım
 docker-compose up -d
 
-# bu komutlar ile kontrol edebilirsin logları
-docker-compose ps
-docker-compose logs nwaku
-```
-```console
 # bu komut ile içersine girelim:
 nano ~/nwaku-compose/docker-compose.yml
 ```
